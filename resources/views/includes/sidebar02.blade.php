@@ -13,7 +13,8 @@
                 <div class="form-group">
                     <label>積地</label>
                     <select class="form-control mb-2" id="area01" name="loading_country">
-                        <option value="null" style="display:none">県を選択</option>
+                        <option value="null" style="display:none">地方を選択</option>
+                        <option value="0"></option>
                         <option value="1" {{session('luggage_loading_country') == '1' ? 'selected' : ''}}>北海道</option>
                         <option value="2" {{session('luggage_loading_country') == '2' ? 'selected' : ''}}>北東北</option>
                         <option value="3" {{session('luggage_loading_country') == '3' ? 'selected' : ''}}>南東北</option>
@@ -27,9 +28,9 @@
                         <option value="11" {{session('luggage_loading_country') == '11' ? 'selected' : ''}}>四国</option>
                         <option value="12" {{session('luggage_loading_country') == '12' ? 'selected' : ''}}>九州・沖縄</option>
                     </select>
-                
+
                     <select class="form-control" name="loading_space" id="pref01">
-                        <option value="null" style="display:none">地方を選択</option>
+                        <option value="null" style="display:none">県を選択</option>
                         <option value="0" data-val="0"></option>
                         <option value="北海" {{session('luggage_loading_space') == '北海' ? 'selected' : ''}} data-val="1">北海道</option>
                         <option value="青森" {{session('luggage_loading_space') == '青森' ? 'selected' : ''}} data-val="2">青森県</option>
@@ -82,13 +83,13 @@
                 </div>
 
                 <div class = "form-group mb-2">
-                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="loading_start" placeholder="積日を指定" value="{{old('loading_start')}}">
+                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="loading_start" placeholder="積地を指定" value="{{old('loading_start')}}">
                 </div>
                 <div class = "from_text kt-align-center">～</div>
-                <div class = "form-group mt-2"> 
-                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_2" name="loading_end" placeholder="積日を指定" value="{{old('loading_end')}}">
+                <div class = "form-group mt-2">
+                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_2" name="loading_end" placeholder="積地を指定" value="{{old('loading_end')}}">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="exampleSelect2">降地</label>
                     <select class="form-control mb-2" id="area02" name="luggage_drop_country">
@@ -107,7 +108,7 @@
                         <option value="11" {{session('luggage_drop_country') == '11' ? 'selected' : ''}}>四国</option>
                         <option value="12" {{session('luggage_drop_country') == '12' ? 'selected' : ''}}>九州・沖縄</option>
                     </select>
-                
+
                     <select class="form-control" id="pref02" name="drop_space">
                         <option data-val="0" style="display:none;" value="">県を選択</option>
                         <option value="0" data-val="0"></option>
@@ -161,20 +162,20 @@
                     </select>
                 </div>
                 <div class = "form-group mb-2">
-                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_3" name="drop_start" placeholder="積日を指定" value="{{old('drop_start')}}">
+                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_3" name="drop_start" placeholder="降日を指定" value="{{old('drop_start')}}">
                 </div>
                 <div class="from_text kt-align-center">～</div>
-                
+
                 <div class = "form-group mt-2">
-                   <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_2" name="drop_end" placeholder="積日を指定" value="{{old('drop_end')}}">
+                   <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_2" name="drop_end" placeholder="降日を指定" value="{{old('drop_end')}}">
                 </div>
-                
+
                 <div class="kt-action_info__content">
                     <div class = "kt-widget5_section-left">
                       <button type="submit" class="btn  btn-wide" style =" width:100%">検 索</button>
                     </div>
-                </div>	
-                
+                </div>
+
             </form>
         </div>
     </div>
@@ -192,7 +193,7 @@
                 <div class="form-group">
                     <label for="exampleSelect3">積地</label>
                     <select class="form-control mb-2" id="area11" name="loading_country">
-                        <option value="null" style="display:none">北海道</option>
+                        <option value="null" style="display:none">地方を選択</option>
                         <option value="0"></option>
                         <option value="1" {{session('emptycar_loading_country') == '1' ? 'selected' : ''}}>北海道</option>
                         <option value="2" {{session('emptycar_loading_country') == '2' ? 'selected' : ''}}>北東北</option>
@@ -207,9 +208,9 @@
                         <option value="11" {{session('emptycar_loading_country') == '11' ? 'selected' : ''}}>四国</option>
                         <option value="12" {{session('emptycar_loading_country') == '12' ? 'selected' : ''}}>九州・沖縄</option>
                     </select>
-                
+
                     <select class="form-control" id="pref11" name="loading_space">
-                        <option value="" style="display:none">北海道</option>
+                        <option value="" style="display:none">県を選択</option>
                         <option value="0" data-val="0"></option>
                         <option value="北海" {{session('emptycar_loading_space') == '北海' ? 'selected' : ''}} data-val="1">北海道</option>
                         <option value="青森" {{session('emptycar_loading_space') == '青森' ? 'selected' : ''}} data-val="2">青森県</option>
@@ -262,14 +263,14 @@
                 </div>
 
                 <div class = "form-group mb-2">
-                <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_5" name="loading_start" placeholder="積日を指定">
+                <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_5" name="loading_start" placeholder="積地を指定">
                 </div>
                 <div class="from_text kt-align-center">～</div>
-                
+
                 <div class = "form-group mt-2">
-                <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_6" name="loading_end" placeholder="積日を指定">
+                <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_6" name="loading_end" placeholder="積地を指定">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="exampleSelect4">降地</label>
                     <select class="form-control mb-2" id="area12" name="drop_country">
@@ -288,7 +289,7 @@
                         <option value="11" {{session('emptycar_drop_country') == '11' ? 'selected' : ''}}>四国</option>
                         <option value="12" {{session('emptycar_drop_country') == '12' ? 'selected' : ''}}>九州・沖縄</option>
                     </select>
-                
+
                     <select class="form-control" id="pref12" name="drop_space">
                         <option value="" style="display:none">県を選択</option>
                         <option value="0" data-val="0"></option>
@@ -342,20 +343,20 @@
                     </select>
                 </div>
                 <div class = "form-group mb-2">
-               <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_start" placeholder="積日を指定">
+               <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_start" placeholder="降日を指定">
                 </div>
                 <div class="from_text kt-align-center">～</div>
-                
+
                 <div class = "form-group mt-2">
-                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_end" placeholder="積日を指定">
+                    <input type="text" class="col form-control input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_end" placeholder="降日を指定">
                 </div>
-                
+
                 <div class="kt-action_info__content">
                     <div class = "kt-widget5_section-right">
                            <button type="submit" class="btn  btn-wide" style =" width:100%">検 索</button>
                     </div>
-                </div>	
-                
+                </div>
+
             </form>
        </div>
     </div>

@@ -18,7 +18,7 @@
             <div class="col-3"></div>
         </div>
     </div>
-            
+
     <!--begin::Portlet-->
     <!-- <div class="kt-portlet__body luggage_search"> -->
     <div class="kt-portlet__body luggage bg-grey">
@@ -163,7 +163,7 @@
         <!--end: Search Form -->
     </div>
     <div class="kt-portlet__body kt-portlet__body--fit">
-        
+
         <!--begin: Datatable -->
             <table class="table table-bordered ">
                 <thead class="blue">
@@ -183,18 +183,18 @@
                         <th>種類３</th>
                         <th>備考</th>
                         <th>入力日時</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
-                    @php 
+                    @php
                         $add_number = 0;
                         if(isset($_GET['page']))
                         {
                             $page = $_GET['page'];
-                            $add_number = 10*($page-1); 
+                            $add_number = 10*($page-1);
                         }
-                            
+
                     @endphp
                         @foreach($results as $result)
                         <tr>
@@ -218,7 +218,7 @@
                 </tbody>
             </table>
             {{$results->onEachSide(1)->links('vendor.pagination.default') }}
-        
+
             <div class="kt-action_info__content kt-align-center mt-4">
                 <div class="kt-widget5_section-right">
                     <a href="{{url('emtpyTruck_create')}}">
@@ -229,11 +229,15 @@
         <!--end: Datatable -->
     </div>
     <!--end::Portlet-->
-</div>   
+</div>
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 @section('scripts')
     jQuery(document).ready(function(){

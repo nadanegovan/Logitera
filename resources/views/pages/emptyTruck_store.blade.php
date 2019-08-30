@@ -44,7 +44,7 @@
                                             <label class="kt-font-xl"><i class="fa fa-circle icon mt-n3" style="font-size:11px; color:#ff6600"></i>空車日時
                                             </label>
                                             <div class="input-group">
-                                                
+
                                             <input type="text" class="col form-control kt-font-xl input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="emptycar_date" value="{{old('emptycar_date')}}">
                                             @if ($errors->has("emptycar_date"))
                                                 <h5 style="color:#e96565">{{$errors->first("emptycar_date")}}</h5>
@@ -93,12 +93,12 @@
                                             @if(!empty($_POST['beginplace']))
                                                 $secFilter_place = substr($_POST['beginplace'], 0, -1);
                                                 $beginplaces = explode(',' , $secFilter_place);
-                                        
+
                                                 @foreach($beginplaces as $beginplace)
                                                     <input type="button" id="{{'area' . $loop->iteration }}" value="{{$beginplace}}" class="btn btn-danger mb-3 mr-3">
                                                 @endforeach
                                             @endif
-                                        </div>  
+                                        </div>
                                     </div>
                                     @if ($errors->has("beginplace"))
                                         <h5 style="color:#e96565">{{$errors->first("beginplace")}}</h5>
@@ -164,7 +164,7 @@
                                                     <input type="button" id="{{'array' . $loop->iteration }}" value="{{$arraydata}}" class="btn btn-danger mb-3 mr-3">
                                                 @endforeach
                                             @endif
-                                        </div>  
+                                        </div>
                                     </div>
                                             @if ($errors->has("endplace"))
                                                 <h5 style="color:#e96565">{{$errors->first("endplace")}}</h5>
@@ -182,7 +182,7 @@
                                                 @if(!empty($_POST["emptyplaceSpec"]))
                                                     <input type="button" id="empty01" value="{{old('emptyplaceSpec')}}" class="btn btn-danger mb-3 mr-3">
                                                 @endif
-                                                </div>  
+                                                </div>
                                             </div>
                                                 @if ($errors->has("emptyplaceSpec"))
                                                     <h5 style="color:#e96565">{{$errors->first("emptyplaceSpec")}}</h5>
@@ -245,7 +245,7 @@
                                 @if ($errors->has("vehicle"))
                                     <h5 style="color:#e96565">{{$errors->first("vehicle")}}</h5>
                                 @endif
-                                
+
                             </div>
                         </div>
                         <div class="form-group row">
@@ -437,5 +437,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

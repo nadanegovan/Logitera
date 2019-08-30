@@ -22,15 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 
 
-//auth other page
-
-Route::get('/forget', 'Auth\ResetController@showLinkRequestForm')->name('forget');
-
-// Route::get('/', function () {
-//     return view('/pages/index');
-// });
-
-Route::get('/forget', 'Auth\RegisterController@forget');
 Route::get('/register', function(){
     return view('pages.register');
 });
@@ -38,7 +29,7 @@ Route::get('/register', function(){
 
 
 
-Route::get('/membership','LuggagesController@member');
+Route::get('/membership','MembersController@membership');
 
 Route::get('/corpInfo', function(){
     return view('pages/corpInfo');
@@ -49,14 +40,19 @@ Route::get('/using', function(){
 Route::get('/question_answer', function(){
     return view('pages/question_answer');
 });
-Route::get('/contact', function(){
-    return view('pages/contact');
-});
+// Route::get('/contact', function(){
+//     return view('pages/contact');
+// });
 
 //forget pasword
-Route::post('/forget', 'AuthController@update');
+Route::get('/forget', 'MembersController@forget')->middleware('guest');
+Route::post('/forget', 'MembersController@resetPassword')->middleware('guest');
+
 //register member
 Route::post('/register', 'AuthController@register');
+Route::get('/memberedit', 'MembersController@edit')->name('memberedit');
+Route::post('/memberedit', 'MembersController@update')->name('memberedit');
+
 //Check register
 Route::get('/register_check/{member_id}', 'Auth\RegisterController@register_check');
 
@@ -64,7 +60,7 @@ Route::get('/register_check/{member_id}', 'Auth\RegisterController@register_chec
 // Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 //Manage Luggages
 Route::get('/luggage_edit','LuggagesController@edit')->middleware('auth');
@@ -113,6 +109,7 @@ Route::post('admin/logout', 'AdminAuth\LoginController@logout')->name('admin.log
 
 Route::group(['prefix' => 'admin'], function (){
     Route::get('/dashboard',"AdminController@index" )->name('admin.dashboard')->middleware('admin');
+    Route::get('/home',"AdminController@index" )->name('admin.dashboard')->middleware('admin');
     Route::post('change-password','AdminController@saveResetPassword')->name('change.password');
     Route::get('/employee','UserController@index' )->name('employee.list')->middleware('admin');
     Route::put('/employee/update-employee/{id}','UserController@employeeUpdate' )->name('employee.update')->middleware('admin');

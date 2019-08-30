@@ -33,7 +33,7 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            
+
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
@@ -45,7 +45,10 @@
                             <span id="navbarDropdown" class="nav-link">
                                 {{ Auth::user()->corp_name }}
                             </span>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a href="{{ route('memberedit') }}" class="btn">
+                                {{ __('会員情報修正') }}
+                            </a>|
+                            <a href="{{ route('logout') }}" class="btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 {{ __('ログアウト') }}
                             </a>
 
@@ -60,7 +63,7 @@
             <!-- begin:: Brand -->
             <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                 <div class="kt-header__brand-logo">
-                <a href="/using">                                
+                <a href="/contact">
                     <img alt="Logo" src="{{asset('/media/img/mail_icon.png')}}" class="kt-header__brand-logo-default"/>
                     <img alt="Logo" src="{{asset('/media/img/mail_icon_sm.png')}}" class="kt-header__brand-logo-sticky" />
                 </a>

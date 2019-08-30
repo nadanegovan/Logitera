@@ -41,7 +41,7 @@
                                             <div class="col-xl-5">
                                                 <div class="input-group">
                                                     <input type="text" class="col form-control kt-font-xl input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="loading_end">
-                                                </div>							
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                                 <label class="kt-font-xl">積地
                                                 </label>
                                                 <div class="box_left form-control kt-font-xl input_style" id="box_left">
-                                               </div>  
+                                               </div>
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                                             <div class="col-xl-5">
                                                 <div class="input-group">
                                                     <input type="text" class="col form-control kt-font-xl input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_end">
-                                                </div>							
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@
                                         </div>
                                     </div>
                                 </div>
-                           
+
                             <!--end::Form-->
                             <!--begin::Form-->
                             <div class="form-group row mb-5 mt-5">
@@ -278,7 +278,11 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 @section('scripts')
     jQuery(document).ready(function(){
@@ -327,4 +331,3 @@
         });
     });
 @stop
-

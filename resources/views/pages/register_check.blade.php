@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 
 @section('content')
 <!--begin:: Widgets/Blog-->
@@ -11,17 +11,17 @@
     </div>
     <div class="kt-portlet pl-5" style="background-color: #efefef; color: #000;font-size: 15px;font-weight: bold;border-radius: 5px;">
         <div class="kt-space-50"></div>
-    
+
         <div class="row mt-5 mb-5">
-            
+
             <div>
                 <span>データに同意する場合は、ボタンをクリックしてください。</span>
             </div>
-        </div> 
-        <br> 
+        </div>
+        <br>
         <div class="kt-space-50"></div>
         <div class="row">
-        
+
             <div class="col-4">
                 <label>会員ID:</label>
                 <span>{{$userdata->member_id}}</span>
@@ -37,9 +37,9 @@
         </div>
         <div class="kt-space-50"></div>
         <div class="row">
-            
+
             <div class="col-4">
-                <label>ご住所郵便番号・プルダウン・住所:</label>
+                <label>ご住所郵便番号:</label>
                 <span>{{$userdata->post_address}}</span>
             </div>
             <div class="col-4">
@@ -53,7 +53,7 @@
         </div>
         <div class="kt-space-50"></div>
         <div class="row">
-            
+
             <div class="col-4">
                 <label>Tel:</label>
                 <span>{{$userdata->tel}}</span>
@@ -69,7 +69,7 @@
         </div>
         <div class="kt-space-100"></div>
         <div class="row">
-            
+
             <div class="col-4">
                 <label>パスワード:</label>
                 <span>{{$userdata->register_pwd}}</span>
@@ -95,5 +95,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

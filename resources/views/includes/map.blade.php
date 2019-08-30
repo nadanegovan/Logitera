@@ -113,7 +113,7 @@
             <div class="col-sm-8 pt-lg-5">
                 <div class="col mb-2">
                     <input type="button" class="btn btn-info" value="九州・沖縄" id="area08" style="width:12.69rem">
-                    <input type="button" class="btn btn-info" value="大分" id="area09" style="width:6.15rem">
+                    <input type="button" class="btn btn-info" value="四国" id="area09" style="width:6.15rem"> 
                     <input type="button" class="btn btn-info" value="中京" id="area10" style="width:6.15rem">
                 </div>
                 <div class="mt-n3 mb-n2">

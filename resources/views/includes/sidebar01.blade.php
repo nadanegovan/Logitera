@@ -7,7 +7,7 @@
         </div> -->
         <form class="kt-form" id="my_form" method="post" action="{{ route('login') }}">
             {{ csrf_field() }}
-            <div class="kt-portlet__body pb-">
+            <div class="kt-portlet__body mb-3">
                 @if(count( $errors ) > 0)
                     @foreach ($errors->all() as $error)
                     <h6 style="color:#e96565">{{ $error }}</h6>
@@ -18,12 +18,12 @@
                     <input  type="text"  name="member_id" class="form-control form-control-sm {{ $errors->has('identity') ? ' has-error' : '' }}"
                         value="{{ old('memberID') }}"/>
                 </div>
-               
+
                 <div class="form-group mb-3">
                     <label for="password">パスワード</label>
                     <input type="password" name="password" id="password" class="form-control form-control-sm"/>
                 </div>
-              
+
                 <div class="form-group mb-1">
                     <a href="javascript:{}" onclick="document.getElementById('my_form').submit(); return false;">
                         <img class="w-100" src="/media/img/login_btn.png" alt />
@@ -50,11 +50,11 @@
             <div class="kt-portlet__body kt-portlet__space-x d-flex justify-content-center flex-wrap mb-3" >
                 <p>ロジとら の</p>
                 <p>サービスは全て無料</p>
-                <a class="btn mt-2" style="background-color:#ed9312">
+                <div class="btn mt-2" style="background-color:#ed9312; color:#fff;">
                     まずは
                     <br />
                     <div style="font-size:17px;">無料会員登録</div>
-                </a>
+                </div>
             </div>
         </a>
     </div>
@@ -86,8 +86,8 @@
     <div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet--first_time">
         <a href="/question_answer">
             <div class="kt-portlet__body kt-portlet__space-x d-flex justify-content-center flex-wrap mb-3" >
-                <span class="btn mt-1 mb-2" style="background-color:#396ec2;color: #fff;font-size:17px;">無料会員登録</span>
-                <span>ロジとら の</span>
+                <span class="btn mt-1 mb-2" style="background-color:#396ec2;color: #fff;font-size:17px;">初めての方</span>
+                <span>よくある質問</span>
             </div>
         </a>
     </div>

@@ -69,7 +69,11 @@
 <!--end:: Widgets/Blog-->
 @endsection
 @section('sidebar')
-  @include('includes.sidebar01')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 @section('main')
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--stretch">
@@ -713,3 +717,13 @@
   </div>
 </div>
 @endsection
+@section('scripts')
+    jQuery(document).ready(function(){
+      $('body').keypress(function(e){
+        if (e.keyCode == 13)
+          {
+              $('#my_form').submit();
+          }
+        });
+    });
+@stop

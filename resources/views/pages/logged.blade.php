@@ -89,10 +89,10 @@
                                         <button type="button" class="btn  btn-wide search-btn">検 索</button>
                                     </div>
                                 </a>
-                            </div>	    
+                            </div>
                         </div>
-                        
-                    
+
+
                         <div class="kt-action_info__content">
                             <div class="package-search d-flex justify-content-around">
                                 <div class="kt-widget5__content">
@@ -108,9 +108,9 @@
                                                 <button type="button" class="btn  btn-wide package-manage-btn">修 正・削 除</button>
                                         </div>
                                     </a>
-                                </div>	
-                            </div>    
-                                
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="kt-widget5 kt-action_wrapper right-widget flex-fill rounded-sm pb-3">
@@ -134,18 +134,18 @@
                                         <button type="button" class="btn  btn-wide search-btn">検 索</button>
                                     </div>
                                 </a>
-                            </div>	    
+                            </div>
                         </div>
 
                         <div class="kt-action_info__content">
-                            <div class="empty-truck-search d-flex justify-content-around">  
+                            <div class="empty-truck-search d-flex justify-content-around">
                                 <div class="kt-widget5__content">
                                     <a href="{{url('emtpyTruck_create')}}">
                                         <div class="kt-widget5_section-right">
                                                 <button type="button" class="btn  btn-wide empty-truck-mange-btn">登 錄</button>
                                         </div>
                                     </a>
-                                </div>	
+                                </div>
                                 <div class="kt-widget5__content">
                                     <a href="{{url('emptyTruck_edit')}}">
                                         <div class="kt-widget5_section-right">
@@ -153,10 +153,10 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>              	
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!--end:: Widgets/Notifications-->
             </div>
@@ -168,5 +168,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -25,15 +25,24 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $this->middleware('auth');
         $data['luggage_num'] = session('luggage_num');
         $data['emptycar_num'] = session('emptycar_num');
         return view('pages.logged',$data);
     }
+
+    public function contact()
+    {
+        $data['luggage_num'] = session('luggage_num');
+        $data['emptycar_num'] = session('emptycar_num');
+        return view('pages.contact',$data);
+    }
+
     public function register_check()
     {
+        $this->middleware('auth');
         return view('pages.register_check');
     }
 
-    
-}
 
+}

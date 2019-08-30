@@ -10,7 +10,7 @@
         </div>
     </div>
     <!--begin::Portlet-->
-    <div class="kt-portlet__body bg-grey pt-3 pb-3"> 
+    <div class="kt-portlet__body bg-grey pt-3 pb-3">
         <div class="row">
             <div class="kt-portlet__head-label col-lg-6">
                 <h3 class="kt-portlet__head-title">
@@ -32,7 +32,7 @@
                 </form>
 
             </div>
-        </div> 
+        </div>
     </div>
     <div class="kt-portlet__body kt-form pr-0 pl-0 pt-2 pb-1">
         <!--begin: Search Form -->
@@ -168,21 +168,21 @@
                     <th>種類３</th>
                     <th>担当</th>
                     <th>備考</th>
-                    
+
                 </tr>
             </thead>
             <tbody>
-            @php 
+            @php
                 $add_number = 0;
                 if(isset($_GET['page']))
                 {
                     $page = $_GET['page'];
-                    $add_number = 10*($page-1); 
+                    $add_number = 10*($page-1);
                 }
-                    
+
             @endphp
                 @if($total_rows == 0)
-                    <tr>                
+                    <tr>
                         <td colspan="15" class="kt-font-xl"> There is no datas </td>
                     </tr>
                 @else
@@ -218,7 +218,11 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 @section('scripts')
     jQuery(document).ready(function(){

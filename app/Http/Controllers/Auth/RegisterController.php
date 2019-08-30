@@ -58,9 +58,8 @@ class RegisterController extends Controller
 
         $this->guard()->login($user);
 
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
-        
+        return $this->registered($request, $user)?: redirect($this->redirectPath());
+
     }
 
     // end:: customize register page
@@ -120,7 +119,7 @@ class RegisterController extends Controller
             'meeting_part' => $data['meeting_part'],
         ]);
         return $this->userdata;
-        
+
     }
 
     public function register_check($member_id){

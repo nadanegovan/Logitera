@@ -8,7 +8,7 @@
                 <div class="kt-current_info__text1 kt-align-center">
                     <p> はじめて「ロジとら」をご利用になる方はこちら</p>
                     ご利用方法
-                    
+
                         <img alt="Logo" style= "vertical-align: sub;" src="{{asset('media/img/arrow_mail.png')}}" class="kt-header__brand-logo-sticky" />
                 </div>
             </div>
@@ -90,5 +90,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar01')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

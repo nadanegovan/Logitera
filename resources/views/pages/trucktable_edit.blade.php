@@ -393,7 +393,7 @@
                             <label class="col-2 col-form-label kt-font-xl"><i class="fa fa-circle icon" style="font-size:11px; color:#ff6600"></i>電話番号</label>
                             <div class="col-10 mt-2">
                                 <input class="col form-control kt-font-xl input_style" name="phone_number" value="{{$edit_data->phone_number}}">
-                                @if ($errors->has("phone")) 
+                                @if ($errors->has("phone"))
                                     <h5 style="color:#e96565">{{$errors->first("phone_number")}}</h5>
                                 @endif
                             </div>
@@ -423,5 +423,9 @@
 @endsection
 
 @section('sidebar')
-@include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

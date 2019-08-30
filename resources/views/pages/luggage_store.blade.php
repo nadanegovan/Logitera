@@ -143,7 +143,7 @@
                                                 <!-- @if(!empty($_POST["emptyplace"])) -->
                                                     <input type="button" id="empty01" value="{{old('emptyplace')}}" class="btn btn-danger">
                                                 <!-- @endif -->
-                                                </div>  
+                                                </div>
                                             </div>
                                             @if ($errors->has("emptyplace"))
                                                 <h5 style="color:#e96565">{{$errors->first("emptyplace")}}</h5>
@@ -171,7 +171,7 @@
                                                 @isset($_POST["emptyOtherplace"])
                                                     <input type="button" id="empty02" value="{{old('emptyOtherplace')}}" class="btn btn-danger mb-3 mr-3">
                                                 @endisset
-                                            </div>  
+                                            </div>
                                             </div>
                                             @if ($errors->has("emptyOtherplace"))
                                                 <h5 style="color:#e96565">{{$errors->first("emptyOtherplace")}}</h5>
@@ -404,7 +404,7 @@
                         <div class="form-group row">
                             <label class="col-2 col-form-label kt-font-xl"><i class="fa fa-circle icon" style="font-size:11px;color:#ff6600"></i>運賃(税抜)</label>
                             <div class="col-3 mt-2 mb-3">
-                                <input class="col form-control kt-font-xl input_style" name="fares_money" value="{{old('fares_money')}}"> 
+                                <input class="col form-control kt-font-xl input_style" name="fares_money" value="{{old('fares_money')}}">
                                 @if ($errors->has("fares_money"))
                                     <h5 style="color:#e96565">{{$errors->first("fares_money")}}</h5>
                                 @endif
@@ -445,7 +445,11 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 
 @section('scripts')
@@ -471,7 +475,7 @@
             var inputValue = event.target.value;
             console.log(inputValue);
             var divname = idname.substr(0, 4);
-            
+
             if ($('.box_empty').css('background-color') === 'rgb(238, 255, 255)') {
                 if (divname === 'pref') {
                     cname = '.box_empty';
@@ -511,5 +515,5 @@
             $('.box_emptyOther > #' + 'inputId').remove();
         });
     });
-        
+
 @stop

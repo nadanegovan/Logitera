@@ -58,7 +58,8 @@ class LoginController extends Controller
             ],
             [
                 'member_id.required' => '会員IDを入力してください。',
-                'password.required' => 'パスワードが異なります。',
+                'password.required' => 'パスワードが異なります。'
+                // 'failed' => '会員IDとパスワードが異なります。'
             ]
         );
     }
@@ -82,7 +83,7 @@ class LoginController extends Controller
         $request->session()->put('login_error', trans('auth.failed'));
         throw ValidationException::withMessages(
             [
-                'error' => [trans('auth.failed')],
+                'error' => ["会員IDとパスワードが異なります。"],
             ]
         );
     }

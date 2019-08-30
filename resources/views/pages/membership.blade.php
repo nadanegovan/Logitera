@@ -7,20 +7,19 @@
         <div class="kt-portlet__body notice">
             <div  class = "ask-sign-title kt-align-center">
                 会員規約
-                <img class="kt-widget7__img tooltip_sty" src="{{asset('media/img/term_icon.png')}}" alt="">		 
+                <img class="kt-widget7__img tooltip_sty" src="{{asset('media/img/term_icon.png')}}" alt="">
             </div>
         <!--begin::Portlet-->
             <div class="notice-title">
                 <div class="notice-title-header kt-align-center mt-5">
-                    <p>ロジとら会員規約</p>    
+                    <p>ロジとら会員規約</p>
                 </div>
                 <div class="notice-title-body kt-align-center">
-                    <p> 物流情報サイト「ロジとら」に会員として登録を希望する企業は、本規約全文を読み、本規約に同</p>
-                    <p>意するものとします。</p>
+                    <p> 物流情報サイト「ロジとら」に会員として登録を希望する企業は、本規約に同意するものとします。</p>
                 </div>
-                <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
             </div>
-            
+
             <div class="notice-content">
                 <div class="notice-content01">
                     <div class="notice-head">
@@ -29,7 +28,7 @@
                     <div class="notice-body">
                         「ロジとら」会員規約（以下、「本規約」という）は、物流情報サイト「ロジとら」（以下、「本サイト」という）を利用するあたり、情報の閲覧を希望する企業（以下、「会員」という）の皆様に遵守して頂かなければならない事項、および本サイト運営会社である株式会社ロジとら（以下、「弊社」という）と会員との間の権利義務関係を定めたものです。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content02">
                     <div class="notice-head">
@@ -41,7 +40,7 @@
                         <p>3.弊社が本サイトに随時掲載するルールや諸規定等は、本規約の一部を構成するものとします。会員は、本サイトの登録をした時点で本規約、およびそれらのルール、諸規定等に同意したものとみなします。</p>
                         <p>4.会員は、本規約を誠実に遵守するものとします。</p>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content03">
                     <div class="notice-head">
@@ -50,7 +49,7 @@
                     <div class="notice-body">
                         本サイトは、運送会社および運送取扱業者に対し、荷物（貨物）情報および空車情報を掲載し、情報を提供するサービス（以下、「本サービス」という）を提供します。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content04">
                     <div class="notice-head">
@@ -59,7 +58,7 @@
                     <div class="notice-body">
                         会員とは、本規約の内容、その他本サイト上に記載する各種ルール、および諸規定等を承諾の上、本サービスの会員登録を完了したものを言います。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content05">
                     <div class="notice-head">
@@ -69,7 +68,7 @@
                         <p>1.会員は、掲載する情報について、正確かつ最新の情報を掲載しなければなりません。</p>
                         <p>2.会員は、掲載する情報については、常に最新のものが提供できるよう更新する義務を負います。</p>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content06">
                     <div class="notice-head">
@@ -80,7 +79,7 @@
                         <p>2.会員は、情報の掲載の中止を希望する場合、本サイトから弊社所定の方法により中止を行い、即日停止することができます。</p>
                         <p>3.弊社は、本条に基づく情報の掲載の中断または中止により会員に生じた損害について一切の責任を負わないものとします。</p>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content07">
                     <div class="notice-head">
@@ -89,7 +88,7 @@
                     <div class="notice-body">
                         弊社は、本サービスにおける会員による情報の掲載が、本規約違反に該当する、または該当するおそれがあると弊社が判断した場合、もしくはその他の事由により、会員に事前に通知することなく、当該情報の全部または一部を掲載停止または削除することができるものとします。弊社は、本条に基づき弊社が行った行為により会員に生じた損害について一切の責任を負わないものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content08">
                     <div class="notice-head">
@@ -100,7 +99,7 @@
                         <p>2.パスワードまたはIDの管理不十分、使用上の過誤、失念、第三者の使用等によって生じた損害は、会員が自己の責任と費用によって負うものとし、弊社はその一切の責任を負いません。</p>
                         <p>3.会員は、パスワードまたはIDを失念し、盗まれ、または第三者に使用されていることが判明した場合には、直ちにその旨を弊社に通知するとともに、弊社からの指示に従うものとします。</p>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content09">
                     <div class="notice-head">
@@ -109,7 +108,7 @@
                     <div class="notice-body">
                         本サイトおよび本サービスに関する所有権および知的財産権は、全て弊社または弊社にライセンスを許諾している者に帰属します。本規約に定める登録に基づく本サービスの利用許諾は、本サイトまたは本サービスに関する弊社または弊社にライセンスを許諾している者の知的財産権の使用許諾を意味するものではありません。会員は、いかなる理由によっても弊社または弊社にライセンスを許諾している者の知的財産権を侵害するおそれのある行為（逆アセンブル、逆コンパイル、リバースエンジニアリングを含みますが、これに限定されません）をしないものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content10">
                     <div class="notice-head">
@@ -118,7 +117,7 @@
                     <div class="notice-body">
                         会員は、掲載する情報について、正確かつ最新の情報を提供するものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content11">
                     <div class="notice-head">
@@ -137,7 +136,7 @@
                         <p>(9)犯罪行為に関連する行為または公序良俗に反する行為をすること</P>
                         <p>(10)その他、弊社が不適切と判断する行為</P>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content12">
                     <div class="notice-head">
@@ -152,7 +151,7 @@
                         <p>(5)本規約に違反した場合</P>
                         <p>(6)その他、弊社が会員としての登録の継続を適当でないと判断した場合</P>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content13">
                     <div class="notice-head">
@@ -161,7 +160,7 @@
                     <div class="notice-body">
                         弊社は、その判断により本サービスの全部または一部を適宜変更できるものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content14">
                     <div class="notice-head">
@@ -174,7 +173,7 @@
                         <p>(3)火災、停電、天災地変、第三者の妨害行為などの不可抗力により本サービスの運営ができなくなった場合</p>
                         <p>(4)その他、弊社が停止または中断を必要と判断した場合</P>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content15">
                     <div class="notice-head">
@@ -183,7 +182,7 @@
                     <div class="notice-body">
                         弊社は、業務上の都合、その他の事由により、会員に事前通知することなく本サービスの全部または一部を自由に廃止することができるものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content16">
                     <div class="notice-head">
@@ -192,7 +191,7 @@
                     <div class="notice-body">
                         会員は、本規約に違反することにより、または本サービスの利用に関連して弊社に損害を与えた場合、弊社に対しその損害を賠償するものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content17">
                     <div class="notice-head">
@@ -207,7 +206,7 @@
                         <p>6.会員は、自己の責任において本サービスを利用するものとします。本サービスの利用による情報の削除または消失、機器の故障または損傷等、本サービスの利用によって会員が被った損害について弊社は一切の責任を負わないものとします。</p>
                         <p>7.弊社は、火災、停電、災害、不慮の事故、不可抗力によるコンピューターのシステムダウン等、予期せぬ事故による会員の損害についていかなる賠償責任も負わないものとします。</p>
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content18">
                     <div class="notice-head">
@@ -216,7 +215,7 @@
                     <div class="notice-body">
                         弊社は、本規約の内容を自由に変更できるものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content19">
                     <div class="notice-head">
@@ -225,7 +224,7 @@
                     <div class="notice-body">
                         本規約の成立、効力、履行および解釈に関する準拠法は、日本国が定める法律、法令、政令が適用されるものとします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
                 <div class="notice-content20">
                     <div class="notice-head">
@@ -234,10 +233,10 @@
                     <div class="notice-body">
                         本規約に起因しまたは関連する一切の紛争については、弊社の本店所在地を管轄する地方裁判所を第一審の専属的管轄裁判所とします。
                     </div>
-                    <div style="border-top: 1px solid #000000; margin: 26px -25px 0px -25px"></div>
+                    <div style="border-top: 1px solid #e7e6e6; margin: 26px -25px 0px -25px"></div>
                 </div>
             </div>
-            
+
             <!--end::Portlet-->
         </div>
     </div>
@@ -245,5 +244,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

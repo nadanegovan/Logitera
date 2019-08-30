@@ -16550,23 +16550,23 @@ canvas {
       background-color:#f6f6f6;
       width:14px;
   }
-  
+
   ::-webkit-scrollbar-track {
       transition: all 0.3s ease;
       background-color:#f6f6f6;
       width:14px;
   }
-  
+
   ::-webkit-scrollbar-track:hover {
       transition: all 0.3s ease;
       background-color:#f6f6f6;
   }
-  
+
   ::-webkit-scrollbar-thumb {
       transition: all 0.3s ease;
       background-color:#c1c1c1;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
       transition: all 0.3s ease;
       background-color: darken(#c1c1c1, 3%);
@@ -49775,4 +49775,8 @@ a.page-link {
     #bg_hidden {
         display: initial;
     }
+}
+
+.kt-portlet .kt-portlet__body.ask_sign{
+  border: 1px solid #e7e6e6;
 }

@@ -60,5 +60,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar01')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

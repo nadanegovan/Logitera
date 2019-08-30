@@ -19,12 +19,12 @@
             <div class="kt-container">
                 <div class="kt-footer__wrapper">
                     <div class="kt-footer__menu d-flex justify-content-around">
-                        <a href="#" target="_blank">ご利用方法</a>
-                        <a href="#" target="_blank">会員登録</a>
-                        <a href="#" target="_blank">運営会社情報</a>
-                        <a href="#" target="_blank">よくあるご質問</a>
-                        <a href="#" target="_blank">お問い合わせ</a>
-                        <a href="#" target="_blank">利用規約</a>
+                        <a href="{{url('using')}}">ご利用方法</a>
+                        <a href="{{url('register')}}">会員登録</a>
+                        <a href="{{url('corpInfo')}}">運営会社情報</a>
+                        <a href="{{url('question_answer')}}">よくあるご質問</a>
+                        <a href="{{url('contact')}}">お問い合わせ</a>
+                        <a href="{{url('membership')}}">利用規約</a>
                     </div>
                 </div>
             </div>

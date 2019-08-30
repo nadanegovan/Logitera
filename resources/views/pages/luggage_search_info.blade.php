@@ -44,7 +44,7 @@
                                             <option value="50" {{ $page_num == 50 ? 'selected' : '' }} >50</option>
                                             <option value="100" {{ $page_num == 100 ? 'selected' : '' }} >100</option>
                                         </select>
-                                    </form> 
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -190,14 +190,14 @@
                                     if(isset($_GET['page']))
                                         {
                                             $page = $_GET['page'];
-                                            $number = 10*($page-1); 
+                                            $number = 10*($page-1);
                                         }
                                 @endphp
 
                                 @foreach($datas as $data)
                                     <tr>
                                         <td>{{$loop->iteration + $number}}</td>
-                                        <td>{{Auth::user()->corp_name}}</td>
+                                        <td>{{$data->corp_name}}</td>
                                         <td>{{$data->person_charge}}</td>
                                         <td>{{$data->phone_number}}</td>
                                         <td>{{$data->loading_date}}</td>
@@ -227,11 +227,15 @@
         </div>
         <!--end::Portlet-->
     </div>
-</div>   
+</div>
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
 @section('scripts')
     jQuery(document).ready(function(){

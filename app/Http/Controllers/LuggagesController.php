@@ -112,7 +112,7 @@ class LuggagesController extends Controller
 		} else {
 			$page_number = 10;
 		}
-		$showdata = Luggage::query();
+		$showdata = DB::table('luggage')->join('users', 'luggage.user_id', '=', 'users.id');
 
 			if (isset($first_sortlist)) {
 			
@@ -153,55 +153,55 @@ class LuggagesController extends Controller
 			session(['search_key' => $request->post()]);
 		}
 		
-		$data['datas'] = Luggage::query();
+		$data['datas'] = DB::table('luggage')->join('users', 'luggage.user_id', '=', 'users.id');
 			
 		$loading_start = session('search_key.loading_start');
 		$loading_end = session('search_key.loading_end');
 		if(isset($loading_start) && isset($loading_end)){
-			$data['datas']->where('loading_date','>', session('search_key.loading_start'));
-			$data['datas']->where('loading_date','<', session('search_key.loading_end'));
+			$data['datas']->where('luggage.loading_date','>', session('search_key.loading_start'));
+			$data['datas']->where('luggage.loading_date','<', session('search_key.loading_end'));
 		}
 
 		$beginplace = session('search_key.beginplace');
 		if(isset($beginplace)){
-			$data['datas'] = $data['datas']->whereIn('loading_space',session('search_key.beginplace'));
+			$data['datas'] = $data['datas']->whereIn('luggage.loading_space',session('search_key.beginplace'));
 		}
 
 		$endplace = session('search_key.endplace');
 		if(isset($endplace)){
-			$data['datas'] = $data['datas']->whereIn('drop_space',session('search_key.endplace'));
+			$data['datas'] = $data['datas']->whereIn('luggage.drop_space',session('search_key.endplace'));
 		}
 
 		$drop_start = session('search_key.drop_start');
 		$drop_end = session('search_key.drop_end');	
 		if(isset($drop_start) && isset($drop_end)){
-			$data['datas']->where('drop_date','>', $drop_start);
-			$data['datas']->where('drop_date','<', $drop_end);
+			$data['datas']->where('luggage.drop_date','>', $drop_start);
+			$data['datas']->where('luggage.drop_date','<', $drop_end);
 		}
 
 		$vehicle_inf = session('search_key.vehicle_inf');
 		if(isset($vehicle_inf)){
-			$data['datas'] = $data['datas']->where('vehicle_inf',$vehicle_inf);
+			$data['datas'] = $data['datas']->where('luggage.vehicle_inf',$vehicle_inf);
 		}
 
 		$vehicle_type1 = session('search_key.type');
 		if(isset($vehicle_type1)){
-			$data['datas'] = $data['datas']->where('vehicle_type1',$vehicle_type1);
+			$data['datas'] = $data['datas']->where('luggage.vehicle_type1',$vehicle_type1);
 		}	
 
 		$vehicle_type1_content = session('search_key.othertype');
 		if(isset($vehicle_type1_content)){
-			$data['datas']->where('vehicle_type1_content',$vehicle_type1_content);
+			$data['datas']->where('luggage.vehicle_type1_content',$vehicle_type1_content);
 		}
 
 		$vehicle_type2 = session('search_key.spec_cond1');
 		if(isset($vehicle_type2)){
-			$data['datas'] = $data['datas']->where('vehicle_type2',$vehicle_type2);
+			$data['datas'] = $data['datas']->where('luggage.vehicle_type2',$vehicle_type2);
 		}
 
 		$vehicle_type3 = session('search_key.spec_cond2');
 		if(isset($vehicle_type3)){
-			$data['datas'] = $data['datas']->where('vehicle_type3',$vehicle_type3);
+			$data['datas'] = $data['datas']->where('luggage.vehicle_type3',$vehicle_type3);
 		}
 		
 		if($request->first_sortlist){
@@ -257,10 +257,7 @@ class LuggagesController extends Controller
 
 		$data['datas'] = $data['datas']->Paginate($page_num);
 		$data['page_num'] = $page_num;
-		$data['corp_name'] = Auth::user()->corp_name;
-		 return view('pages.luggage_search_info', $data);
-		//  return redirect()->route('luggage_info', [10]);
-		//  return redirect()->action('LuggagesController@show_per_num');
+		return view('pages.luggage_search_info',$data);
 	}
 
 	public function simple_search(Request $request){
@@ -270,19 +267,19 @@ class LuggagesController extends Controller
 		$drop_end = $request->get('drop_end');
 		$data['luggage_num'] = session('luggage_num');
 		$data['emptycar_num'] = session('emptycar_num');
-		$data['datas'] = Luggage::query()
+		$data['datas'] = DB::table('luggage')->join('users', 'luggage.user_id', '=', 'users.id')
 		->where(function($query) use ($loading_start,$loading_end){
 			if(!empty($loading_start) && !empty($loading_end)){
-				$query->where('loading_date','>=', $loading_start);
-				$query->where('loading_date','<=', $loading_end);
+				$query->where('luggage.loading_date','>=', $loading_start);
+				$query->where('luggage.loading_date','<=', $loading_end);
 			}
 		})
-		->orwhere('loading_space',$request->get('loading_space'))
-		->orwhere('drop_space',$request->get('drop_space'))
+		->orwhere('luggage.loading_space',$request->get('loading_space'))
+		->orwhere('luggage.drop_space',$request->get('drop_space'))
 		->orwhere(function($query) use ($drop_start,$drop_end){
 			if(!empty($drop_start) && !empty($drop_end)){
-				$query->where('drop_date','>=', $drop_start);
-				$query->where('drop_date','<=', $drop_end);
+				$query->where('luggage.drop_date','>=', $drop_start);
+				$query->where('luggage.drop_date','<=', $drop_end);
 			}
 		})
 		->Paginate(10);

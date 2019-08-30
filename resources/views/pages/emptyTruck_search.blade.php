@@ -42,7 +42,7 @@
                                             <div class="col-xl-5">
                                                 <div class="input-group">
                                                 <input type="text" class="col form-control kt-font-xl input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="loading_end">
-                                                </div>							
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@
                                             <div class="col-xl-5">
                                                 <div class="input-group">
                                                 <input type="text" class="col form-control kt-font-xl input_style" data-date-format="yyyy-mm-dd" id="kt_datepicker_1" name="drop_end">
-                                                </div>							
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -211,7 +211,7 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>                  
+                            </div>
 
                             <!--end::Form-->
                             <!--begin::Form-->
@@ -270,11 +270,11 @@
                             </form>
                             <!--end::Form-->
                             <!--begin::Form-->
-                        
+
                             <div class="form-group row mb-5 mt-5">
                                 <button class="btn btn-primary first_time_btn custom-btn" style="width: 300px; height: 80px; border-radius: 10px 10px">検 &nbsp 索</button>
                             </div>
-                        
+
                             <!--end::Form-->
                         </div>
                     </form>
@@ -285,5 +285,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection

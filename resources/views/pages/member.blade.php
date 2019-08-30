@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="font-weight-bolder">ご住所郵便番号・プルダウン・住所</label>
+                    <label class="font-weight-bolder">ご住所郵便番号</label>
                     <input type="email" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
@@ -96,5 +96,9 @@
 @endsection
 
 @section('sidebar')
-  @include('includes.sidebar02')
+  @auth
+    @include('includes.sidebar02')
+  @else
+    @include('includes.sidebar01')
+  @endauth
 @endsection
